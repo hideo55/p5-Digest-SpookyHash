@@ -24,13 +24,13 @@ __END__
 
 =head1 NAME
 
-Digest::Spooky - SpookyHash implementation for Perl
+Digest::SpookyHash - SpookyHash implementation for Perl
 
 =head1 SYNOPSIS
 
   use strict;
   use warnings;
-  use Digest::Spooky qw(spooky32 spooky64 spooky128);
+  use Digest::SpookyHash qw(spooky32 spooky64 spooky128);
   
   my $key = 'spooky';
   
@@ -54,9 +54,7 @@ Calculates a 64 bit hash.
 
 =head2 ($v1, $v2) = spooky128($key [, $seed1 = 0, $seed2 =0])
 
-Calculates a 128 bit hash.
-
-The result is returned as a two element list of 64 bit integers.
+Calculates a 128 bit hash. The result is returned as a two element list of 64 bit integers.
 
 =head1 SEE ALSO
 
