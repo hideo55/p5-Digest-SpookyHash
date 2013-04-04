@@ -1,0 +1,18 @@
+NAME
+    Digest::Spooky - [One line description of module's purpose here]
+
+SYNOPSIS
+      use strict;
+      use warnings;
+      use Digest::Spooky;
+
+DESCRIPTION
+METHODS
+SEE ALSO
+AUTHOR
+      C<< <hide.o.j55 {at} gmail.com> >>
+
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
