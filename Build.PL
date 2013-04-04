@@ -12,7 +12,7 @@ use Module::Build::Pluggable (
 );
 use Config ();
 
-if(!$Config::Config{use64bitint}){
+if ( !$Config::Config{use64bitint} ) {
     warn "# 64bit integer not supported.";
     exit 1;
 }
@@ -26,7 +26,10 @@ my $builder = Module::Build::Pluggable->new(
     c_source             => 'src',
     extra_compiler_flags => [ '-x', 'c++' ],
     xs_files             => { './src/Spooky.xs' => './lib/Digest/SpookyHash.xs' },
-    add_to_cleanup => [ 'Digest-SpookyHash-*', 'lib/Digest/*.c', 'lib/Digest/*.h', 'lib/Digest/*.xs', 'lib/Digest/*.o' ],
+    add_to_cleanup       => [
+        'Digest-SpookyHash-*', 'lib/Digest/*.c', 'lib/Digest/*.h', 'lib/Digest/*.xs',
+        'lib/Digest/*.o',      'MANIFEST.bak'
+    ],
     no_index => { 'directory' => [ 't', 'xt', 'inc', 'eg' ] },
     test_files => ( -d '.git' || $ENV{RELEASE_TESTING} ) ? [qw(t/ xt/)] : ['t/'],
     create_readme  => 1,
