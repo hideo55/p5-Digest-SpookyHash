@@ -36,7 +36,7 @@ my $builder = Module::Build::Pluggable->new(
     create_readme  => 1,
     create_license => 1,
     meta_add       => {
-        keywords  => [qw//],
+        keywords  => [qw/spooky spookyhash hash/],
         resources => { bugtracker => 'https://github.com/hideo55/Digest-SpookyHash/issues', },
     },
 );
