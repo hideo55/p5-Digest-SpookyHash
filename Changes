@@ -1,4 +1,7 @@
 Revision history for Digest::Spooky
 
+0.02    Mon Apr  8 19:30:00 2013
+        - [BUGFIX] Fixed Link error in some version of gcc
+
 0.01    Wed Apr  3 23:05:42 2013
         - Initial release
