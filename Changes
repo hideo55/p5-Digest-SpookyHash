@@ -1,5 +1,8 @@
 Revision history for Digest::Spooky
 
+0.05    Sat Apr 13 21:15:00 2013
+        - Change required perl version
+
 0.04    Sat Apr 13 17:15:00 2013
         - Indicate message for unspported platform
 
