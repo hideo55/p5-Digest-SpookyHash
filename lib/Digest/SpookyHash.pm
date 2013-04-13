@@ -1,6 +1,7 @@
 package Digest::SpookyHash;
 use strict;
 use warnings;
+use 5.008008;
 use base qw(Exporter);
 use XSLoader;
 
