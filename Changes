@@ -1,5 +1,8 @@
 Revision history for Digest::Spooky
 
+0.04    Sat Apr 13 17:15:00 2013
+        - Indicate message for unspported platform
+
 0.03    Sat Apr 13 15:20:00 2013
         - Indicate 'OS unsupported' message
 
