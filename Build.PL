@@ -5,7 +5,7 @@ use Module::Build::Pluggable (
     'CPANfile',
     'GithubMeta',
     'XSUtil' => {
-        'cc_warnings' => 0,
+        'cc_warnings' => 1,
         'c++'         => 1,
         'ppport'      => 'lib/Digest/ppport.h',
         'xshelper'    => 'lib/Digest/xsutil.h',
@@ -14,8 +14,8 @@ use Module::Build::Pluggable (
 use Config ();
 
 if ( !$Config::Config{use64bitint} ) {
-    die "# 64bit integer not supported.";
-    exit;
+    warn "# 64bit integer not supported.";
+    exit 0;
 }
 
 my $builder = Module::Build::Pluggable->new(

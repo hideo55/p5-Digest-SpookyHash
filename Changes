@@ -1,5 +1,8 @@
 Revision history for Digest::Spooky
 
+1.00    Sun Apr 14 11:00:00 2013
+        - Increment major version
+
 0.05    Sat Apr 13 21:15:00 2013
         - Change required perl version
 
