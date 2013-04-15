@@ -15,4 +15,8 @@ cover_db
 META.json
 _build
 Build
-
+lib/Digest/*.h
+lib/Digest/*.c
+lib/Digest/*.xs
+lib/Digest/*.o
+src/*.o
