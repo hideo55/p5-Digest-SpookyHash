@@ -1,5 +1,9 @@
 Revision history for Digest::Spooky
 
+1.01    Tue Apr 16 21:40:00 2014
+        - Improved document
+        - Indicate 'OS unsupported' message
+
 1.00    Sun Apr 14 11:00:00 2013
         - Increment major version
 
