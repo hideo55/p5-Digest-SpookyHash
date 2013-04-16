@@ -14,8 +14,7 @@ use Module::Build::Pluggable (
 use Config ();
 
 if ( !$Config::Config{use64bitint} ) {
-    warn "# 64bit integer not supported.";
-    exit 0;
+    die "OS unsupported:\n# 64bit integer unsupported.";
 }
 
 my $builder = Module::Build::Pluggable->new(
