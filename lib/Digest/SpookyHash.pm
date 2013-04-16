@@ -37,11 +37,13 @@ Digest::SpookyHash - SpookyHash implementation for Perl
   
   my $hash32  = spooky32($key, 0);
   my $hash64  = spooky64($key, 0);
-  my @hash128 = spooky128($key, 0);
+  my ($hash64_1, $hash64_2) = spooky128($key, 0);
 
 =head1 DESCRIPTION
 
-This module provides an interface to SpookyHash functions.
+This module provides an interface to SpookyHash(SpookyHash V2) functions.
+
+B<This module works only in the environment which supported a 64-bit integer>.
 
 =head1 FUNCTIONS
 
