@@ -12,7 +12,6 @@ MYMETA.json
 MYMETA.yml
 .includepath
 cover_db
-META.json
 _build
 Build
 lib/Digest/*.h
@@ -20,3 +19,11 @@ lib/Digest/*.c
 lib/Digest/*.xs
 lib/Digest/*.o
 src/*.o
+/Digest-Spooky-*
+/.build
+/_build_params
+/Build
+!Build/
+!META.json
+!LICENSE
+/Digest-SpookyHash-*
