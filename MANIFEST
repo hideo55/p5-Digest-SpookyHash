@@ -1,4 +1,5 @@
 Build.PL
+builder/MyBuilder.pm
 Changes
 cpanfile
 lib/Digest/SpookyHash.pm

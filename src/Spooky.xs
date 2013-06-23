@@ -6,7 +6,6 @@ extern "C" {
 #include "perl.h"
 #include "XSUB.h"
 #include "ppport.h"
-#include "xsutil.h"
 #ifdef __cplusplus
 }
 #endif
