@@ -1,5 +1,7 @@
 Revision history for Digest::Spooky
 
+{{$NEXT}}
+
 1.01    Tue Apr 16 21:40:00 2014
         - Improved document
         - Indicate 'OS unsupported' message
