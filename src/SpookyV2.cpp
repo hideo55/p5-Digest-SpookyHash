@@ -160,7 +160,7 @@ void SpookyHash::Hash128(
         while (u.p64 < end)
         { 
             Mix(u.p64, h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11);
-	    u.p64 += sc_numVars;
+            u.p64 += sc_numVars;
         }
     }
     else
@@ -169,7 +169,7 @@ void SpookyHash::Hash128(
         {
             memcpy(buf, u.p64, sc_blockSize);
             Mix(buf, h0,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11);
-	    u.p64 += sc_numVars;
+            u.p64 += sc_numVars;
         }
     }
 
