@@ -45,7 +45,7 @@ This module provides an interface to SpookyHash(SpookyHash V2) functions.
 
 B<This module works only in the environment which supported a 64-bit integer>.
 
-B<This module will compute different results on little-endian machines and big-endian machines>
+B<This module will compute different results on little endian machines and big-endian machines>
 
 =head1 FUNCTIONS
 

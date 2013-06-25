@@ -22,6 +22,8 @@ This module provides an interface to SpookyHash(SpookyHash V2) functions.
 
 __This module works only in the environment which supported a 64-bit integer__.
 
+__This module will compute different results on little endian machines and big-endian machines__
+
 # FUNCTIONS
 
 ## spooky32($key \[, $seed = 0\])

@@ -101,7 +101,7 @@ void SpookyHash::Short(
     
     // Handle the last 0..15 bytes, and its length
     d += ((uint64)length) << 56;
-    BYTESWAP64(u.p64);
+    (void)BYTESWAP64(u.p64);
     switch (remainder)
     {
     case 15:
@@ -287,7 +287,7 @@ void SpookyHash::Update(const void *message, size_t length)
     {
         u.p8 = (const uint8 *)message;
     }
-    BYTESWAP64(u.p64);
+    (void)BYTESWAP64(u.p64);
     
     // handle all whole blocks of sc_blockSize bytes
     end = u.p64 + (length/sc_blockSize)*sc_numVars;
