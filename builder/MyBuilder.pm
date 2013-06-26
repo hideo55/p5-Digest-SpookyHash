@@ -9,6 +9,10 @@ if ( !$Config::Config{use64bitint} ) {
     die "OS unsupported:\n# 64bit integer unsupported.";
 }
 
+if( $Config::Config{byteorder} eq '87654321' ){
+    die "OS unsupported:\n# This module supports little endian environment.";
+}
+
 sub new {
     my ( $self, %args ) = @_;
     $self->SUPER::new(

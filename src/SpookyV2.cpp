@@ -14,33 +14,6 @@
 
 #define ALLOW_UNALIGNED_READS 1
 
-#if defined(__BYTE_ORDER__) && defined(__ORDER_LITTLE_ENDIAN__)
-# if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-#   define BYTESWAP64(x) ((uint64_t)(x))
-# endif
-/* if __BYTE_ORDER__ is not predefined (like FreeBSD), use arch */
-#elif defined(__i386)  || defined(__x86_64) \
-  ||  defined(__alpha) || defined(__vax)
-# define BYTESWAP64(x) ((uint64_t)(x))
-/* use __builtin_bswap64 if available */
-#elif defined(__GNUC__) || defined(__clang__)
-# ifdef __has_builtin && __has_builtin(__builtin_bswap64)
-#   define BYTESWAP64(x) __builtin_bswap64(x)
-# endif
-#endif
-/* last resort (big-endian w/o __builtin_bswap64) */
-#ifndef BYTESWAP64
-#   define BYTESWAP64(x)                                 \
-    (((uint64_t)(x) << 56) |                           \
-     (((uint64_t)(x) << 40) & 0X00FF000000000000ULL) | \
-     (((uint64_t)(x) << 24) & 0X0000FF0000000000ULL) | \
-     (((uint64_t)(x) << 8)  & 0X000000FF00000000ULL) | \
-     (((uint64_t)(x) >> 8)  & 0X00000000FF000000ULL) | \
-     (((uint64_t)(x) >> 24) & 0X0000000000FF0000ULL) | \
-     (((uint64_t)(x) >> 40) & 0X000000000000FF00ULL) | \
-     ((uint64_t)(x)  >> 56))
-#endif
-
 //
 // short hash ... it could be used on any message, 
 // but it's used by Spooky just for short messages.
@@ -101,7 +74,7 @@ void SpookyHash::Short(
     
     // Handle the last 0..15 bytes, and its length
     d += ((uint64)length) << 56;
-    (void)BYTESWAP64(u.p64);
+
     switch (remainder)
     {
     case 15:
@@ -287,7 +260,6 @@ void SpookyHash::Update(const void *message, size_t length)
     {
         u.p8 = (const uint8 *)message;
     }
-    (void)BYTESWAP64(u.p64);
     
     // handle all whole blocks of sc_blockSize bytes
     end = u.p64 + (length/sc_blockSize)*sc_numVars;
