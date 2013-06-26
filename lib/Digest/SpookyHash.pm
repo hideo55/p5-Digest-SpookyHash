@@ -6,7 +6,7 @@ use base qw(Exporter);
 use XSLoader;
 
 BEGIN {
-    our $VERSION = '1.03';
+    our $VERSION = '1.04';
     XSLoader::load __PACKAGE__, $VERSION;
 }
 
