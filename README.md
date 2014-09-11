@@ -8,10 +8,8 @@ Digest::SpookyHash - SpookyHash implementation for Perl
     use warnings;
     use Digest::SpookyHash qw(spooky32 spooky64 spooky128);
     
-
     my $key = 'spooky';
     
-
     my $hash32  = spooky32($key, 0);
     my $hash64  = spooky64($key, 0);
     my ($hash64_1, $hash64_2) = spooky128($key, 0);
@@ -20,9 +18,9 @@ Digest::SpookyHash - SpookyHash implementation for Perl
 
 This module provides an interface to SpookyHash(SpookyHash V2) functions.
 
-__This module works only in the environment which supported a 64-bit integer__.
+**This module works only in the environment which supported a 64-bit integer**.
 
-__This module works only in little endian machine__.
+**This module works only in little endian machine**.
 
 # FUNCTIONS
 
